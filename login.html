@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+    body{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .container{
+        background-color: aqua;
+        
+        
+    }
+    .input-field{
+        margin-bottom: 8px;
+        padding: 3px;
+        width: 100%;
+        
+        
+    
+    }
+    .input-field input{
+        border: none;
+        font-size: 1rem;
+        border-radius: 10px;
+        padding: 2px;
+        border: 2px rgb(121, 121, 255) solid;
+        display: block;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-weight: bolder;
+    }
+     input ::placeholder{
+        font-weight: lighter;
+    }
+    .input-field label{
+        text-align: start;
+    }
+    .input-field input:focus{
+        outline: none;
+    }
+    h1{
+        text-align: center;
+        color: rgb(1, 1, 233);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    #btn{
+        text-align: start;
+        margin-bottom: 2px;
+        border-radius: 5px;
+        background-color: rgb(60, 60, 230);
+        border: none;
+        color: white;
+        font-size: 1rem;
+    
+    }
+    </style>
+    <div class="container">
+        <form onsubmit="return (validate())"  action="todo.html">
+            <h1>LOGIN</h1>
+            <div class="input-field">
+                <input type="email" id="email" placeholder="EMAIL" >
+                <label for="email" class="emaillabel"></label>
+            </div>
+            <div class="input-field">
+                <input type="password" id="pwd" placeholder="PASSWORD">
+                <label for="pwd" class="pwdlabel"></label>
+            </div>
+            <button  type="submit" id="btn">submit</button>
+        </form>
+    </div>
+    <script >
+        var email=document.getElementById("email")
+var password=document.getElementById("pwd")
+var emaillabel=document.querySelector(".emaillabel")
+var pwdlabel=document.querySelector(".pwdlabel")
+
+function validate()
+{
+    if(email.value=="")
+
+    {
+        emaillabel.textContent="enter the email"
+        return false
+    }
+    else{
+        emaillabel.textContent=""
+    }
+   if(password.value=="")
+    {
+        pwdlabel.textContent="enter the password"
+        return false
+    }
+    else{
+        emaillabel.textContent=""
+    }
+
+}
+    </script>
+</body>
+</html>

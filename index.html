@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<body>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            background-color: rgb(202, 146, 255);
+            border-radius: 5px;
+        }
+        h1{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(0, 38, 255);
+        }
+        .input-field input{
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: none;
+            margin: 3px;
+            border: 2px rgb(0, 255, 242) solid;
+            font-size: 1rem;
+            background-color: rgb(183, 183, 252);
+            color: rgb(0, 0, 0);
+            font-weight: bolder;
+            outline: none;
+                
+        }
+        .btn{
+            margin: 8px;
+            border: none;
+            background-color: rgb(50, 168, 3);
+            border-radius: 10px;
+            color: black;
+            font-size: 1rem;
+        }
+        .input-field ::placeholder{
+            color: black;
+            font-size: .7rem;
+            font-weight: lighter;
+        }
+        .input-field label{
+            font-size: .8rem;
+        }
+    </style>
+    <div class="container">
+       <form action="login.html" onsubmit="return (validate())">
+        <h1>SIGN UP</h1>
+        <div class="input-field">
+            <input type="text" placeholder="Enter you are name" id="name"><br>
+            <label for="name" id="namelabel"></label>
+            <div>
+         <div class="input-field">
+            <input type="number" placeholder="Enter you are number" id="number"><br>
+            <label for="number" id="numberlabel"></label>
+            </div>
+            <div class="input-field">
+            <input type="email" placeholder="Enter you are email" id="email"><br>
+            <label for="email" id="emaillabel"></label>
+            </div>
+            <div class="input-field">
+            <input type="password" placeholder="Enter you are password" id="pwd"><br>
+            <label for="pwd" id="pwdlabel"></label>
+        </div>
+
+        <button type="submit" value="submit" class="btn">SUBMIT</button>
+       </form>
+        
+    </div>
+    <script>
+        let inputname=document.getElementById("name")
+        let inputnumber=document.getElementById("number")
+        let inputemail=document.getElementById("email")
+        let inputpwd=document.getElementById("pwd")
+        let namelabel=document.getElementById("namelabel")
+        let numberlabel=document.getElementById("numberlabel")
+        let emaillabel=document.getElementById("emaillabel")
+        let pwdlabel=document.getElementById("pwdlabel")
+
+
+        function validate()
+        {
+            if(inputname.value=="")
+          {  namelabel.textContent="enter you are name"
+            return false
+          }
+        if(inputnumber.value=="")
+        {
+              numberlabel.textContent="enter you are number"
+              return false
+
+        }
+        if(inputemail.value=="")
+        {
+            emaillabel.textContent="enter you are emeil"
+            return false
+
+        }
+        if(inputpwd.value=="")
+        {
+            pwdlabel.textContent="enter password"
+            return false
+        }
+
+        }
+    </script>
+
+</body>
+</html>

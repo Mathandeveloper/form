@@ -1,0 +1,32 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    
+    background-color: red;
+    height: 250px;
+    
+}
+input{
+    margin-left: 5px;
+    margin-right: 5px;
+    
+    outline: none;
+
+}
+h1{
+    text-align: center;
+}
+
+#btn{
+    margin: 5px;
+}
+
+#ullist{
+    list-style: none;
+    color: rgb(22, 24, 20);
+}
+
+</style>
